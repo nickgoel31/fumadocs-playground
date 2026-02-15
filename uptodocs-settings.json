@@ -1,0 +1,421 @@
+{
+  "$schema": "https://uptodocs.com/schema/settings.json",
+  "version": "1.0.0",
+  "config": {
+    "docs": {
+      "path": "content/docs",
+      "ignore": [],
+      "framework": "fumadocs",
+      "diagrams": false,
+      "update_scope": [],
+      "limits": {
+        "max_files": 3,
+        "max_lines": 1000
+      },
+      "changelog": {
+        "enabled": true,
+        "path": "CHANGELOG.md"
+      },
+      "packages": "",
+      "dry_run": true,
+      "scope": {
+        "path": [
+          "src/**"
+        ]
+      },
+      "style": {
+        "enabled": false,
+        "tone": "friendly",
+        "length": "balanced",
+        "guidelines": []
+      },
+      "notifications": {
+        "enabled": false
+      },
+      "template": "",
+      "language": "en",
+      "language_script": "latin",
+      "doc_languages": [
+        "en"
+      ],
+      "external": {
+        "enabled": false,
+        "owner": "",
+        "repo": "",
+        "path": ""
+      },
+      "aggregate": {
+        "enabled": false,
+        "repos": [
+          {
+            "owner": "",
+            "repo": "",
+            "path": ""
+          }
+        ]
+      }
+    }
+  },
+  "general": {
+    "editor": {
+      "defaultMode": "new",
+      "autoSave": {
+        "enabled": true,
+        "interval": 30,
+        "showIndicator": true
+      },
+      "keyboardShortcuts": {
+        "enableVimMode": false,
+        "enableEmacsMode": false,
+        "customShortcuts": {}
+      }
+    },
+    "workspace": {
+      "docsDirectory": "docs",
+      "framework": "auto",
+      "fileOrganization": {
+        "groupByFolder": true,
+        "showHiddenFiles": false,
+        "sortAlphabetically": true,
+        "sortOrder": "asc"
+      }
+    },
+    "fileCreation": {
+      "autoGenerateSlug": true,
+      "addCreationDate": true,
+      "useTemplate": false,
+      "defaultTemplate": ""
+    },
+    "display": {
+      "uiTheme": "obsidian",
+      "previewTheme": "default",
+      "fontSize": {
+        "editor": 13,
+        "preview": 16
+      },
+      "zoom": 100
+    }
+  },
+  "ai": {
+    "enabled": false,
+    "apiKey": "sk-••••••••••••••••••••••••",
+    "provider": "openai",
+    "docGeneration": {
+      "enabled": true,
+      "autoDetectLanguage": true,
+      "generateExamples": true,
+      "includeTypes": true,
+      "tone": "technical",
+      "detailLevel": 2
+    },
+    "autocomplete": {
+      "enabled": true,
+      "trigger": "automatic",
+      "delay": 300,
+      "showConfidence": false
+    },
+    "smartLinks": {
+      "enabled": true,
+      "suggestRelated": true,
+      "detectBroken": true,
+      "linkStyle": "inline"
+    },
+    "contentImprovement": {
+      "grammar": true,
+      "readability": true,
+      "seo": true,
+      "accessibility": true
+    },
+    "learning": {
+      "enabled": false,
+      "adaptToStyle": true,
+      "rememberTerminology": true
+    }
+  },
+  "github": {
+    "enabled": false,
+    "app": {
+      "installationId": null,
+      "repositories": []
+    },
+    "automation": {
+      "autoDocUpdates": {
+        "enabled": false,
+        "triggers": {
+          "codeChanges": true,
+          "packageJsonUpdates": true,
+          "typeChanges": true
+        },
+        "behavior": "create-pr"
+      },
+      "driftDetection": {
+        "enabled": false,
+        "frequency": "weekly",
+        "createIssues": true,
+        "postComments": true,
+        "label": "outdated-docs"
+      },
+      "changelogGeneration": {
+        "enabled": false,
+        "onRelease": true,
+        "include": {
+          "features": true,
+          "bugFixes": true,
+          "breakingChanges": true,
+          "chores": false
+        },
+        "format": "markdown"
+      },
+      "breakingChanges": {
+        "enabled": false,
+        "requireMigrationGuide": true,
+        "blockPR": true,
+        "severity": "warning"
+      }
+    },
+    "prBehavior": {
+      "postPreviewLinks": true,
+      "showDocDiff": true,
+      "includeAISummary": true,
+      "commentStyle": "minimal",
+      "commitMessageTemplate": "docs: update documentation",
+      "branchNamingPattern": "docs/update-${timestamp}"
+    }
+  },
+  "themes": {
+    "selected": "obsidian",
+    "available": [
+      "default"
+    ],
+    "customization": {
+      "primaryColor": "#000000",
+      "fontFamily": "Inter",
+      "borderRadius": 4,
+      "darkMode": false,
+      "customCSS": ""
+    }
+  },
+  "publishing": {
+    "buildOutput": {
+      "format": "static",
+      "baseURL": "/"
+    },
+    "seo": {
+      "generateMetaDescriptions": true,
+      "addOpenGraphTags": true,
+      "addTwitterCardTags": true,
+      "generateSitemap": true,
+      "generateRSS": false,
+      "defaultOGImage": null
+    },
+    "hosting": {
+      "provider": "self-hosted",
+      "customDomain": null,
+      "autoSSL": false,
+      "cdnEnabled": false
+    }
+  },
+  "collaboration": {
+    "enabled": false,
+    "realtime": {
+      "enabled": true,
+      "showCursors": true,
+      "showSelections": true,
+      "showViewers": true
+    },
+    "comments": {
+      "enabled": true,
+      "allowSuggestions": true,
+      "emailOnMention": true,
+      "autoResolveThreads": false
+    },
+    "notifications": {
+      "onMention": true,
+      "onComment": true,
+      "onAnyEdit": false,
+      "onNewMember": true
+    },
+    "permissions": {
+      "defaultRole": "viewer",
+      "enableDocumentPermissions": false,
+      "documentOverrides": {}
+    }
+  },
+  "analytics": {
+    "documentationHealth": {
+      "enabled": false,
+      "trackCoverage": true,
+      "monitorFreshness": true,
+      "checkBrokenLinks": true,
+      "analyzeReadability": true,
+      "scanFrequency": "weekly",
+      "lastHealthCheck": {
+        "project_id": "528a26dd-63c4-425e-98bd-8efbb11a625f",
+        "baseline_info": {
+          "baseline_id": "8939e40f-3b0e-4b4c-a820-f8229d277f40",
+          "commit_hash": "current-sha",
+          "commit_timestamp": "2026-02-09T13:04:58.345Z",
+          "reason": "manual_rescan",
+          "created_at": "2026-02-09T13:04:58.361Z"
+        },
+        "overall_score": 35,
+        "metrics": {
+          "coverage": {
+            "score": 0,
+            "documented_symbols": 0,
+            "total_symbols": 6
+          },
+          "freshness": {
+            "score": 100,
+            "fresh_symbols": 6,
+            "total_symbols": 6,
+            "unresolved_drifts": 0
+          },
+          "accuracy": {
+            "score": 0,
+            "high_confidence_mappings": 0,
+            "total_mappings": 0,
+            "confidence_threshold": 0.6
+          },
+          "structure": {
+            "score": 0,
+            "orphaned_docs": 1,
+            "duplicate_docs": 0,
+            "incomplete_docs": 0,
+            "total_docs": 1,
+            "structural_issues": 1
+          },
+          "link_integrity": {
+            "score": 100,
+            "valid_links": 0,
+            "total_links": 0,
+            "broken_links": 0
+          }
+        },
+        "computed_at": "2026-02-09T13:05:31.380Z"
+      }
+    },
+    "visitorTracking": {
+      "enabled": false,
+      "provider": "builtin",
+      "trackingId": null,
+      "events": {
+        "pageViews": true,
+        "searchQueries": true,
+        "copyCodeClicks": true,
+        "externalLinks": true,
+        "customEvents": false
+      },
+      "privacy": {
+        "respectDoNotTrack": true,
+        "cookieFree": false,
+        "showCookieBanner": true
+      }
+    },
+    "reports": {
+      "weeklyHealthReport": {
+        "enabled": false,
+        "recipients": []
+      },
+      "monthlySummary": {
+        "enabled": false,
+        "recipients": []
+      },
+      "slackNotifications": {
+        "enabled": false,
+        "webhookURL": null
+      }
+    }
+  },
+  "advanced": {
+    "api": {
+      "enabled": false,
+      "key": null,
+      "webhookURL": null,
+      "sendWebhooksOnUpdate": false
+    },
+    "integrations": {
+      "custom": []
+    },
+    "backup": {
+      "autoBackupToGit": true,
+      "frequency": "daily",
+      "retentionDays": 30
+    },
+    "performance": {
+      "enableCache": true,
+      "cacheDuration": 3600,
+      "lazyLoadImages": true,
+      "optimizeImages": true
+    },
+    "experimental": {
+      "enableBetaFeatures": false,
+      "features": []
+    }
+  },
+  "_metadata": {
+    "createdAt": "2026-01-28T16:22:33.371Z",
+    "updatedAt": "2026-02-15T08:50:41.923Z",
+    "version": "1.0.0",
+    "lastSyncedAt": null,
+    "cloudSyncEnabled": false
+  },
+  "_system": {
+    "detectedFramework": "next",
+    "activeDocsDir": "F:\\BUSINESS\\TWJ LABS\\Startup Projects\\uptodocs\\fumadocs-playground\\my-app\\content\\docs"
+  },
+  "projectId": "1699a5af-94ed-4acb-a0b8-2c14bb5a1506",
+  "templates": {
+    "api": {
+      "name": "API Documentation",
+      "outline": {
+        "sections": [
+          {
+            "id": "bootstrap_template",
+            "content": [
+              "# ${symbol.symbol_name}",
+              "",
+              "## Overview",
+              "",
+              "This document describes the `${symbol.symbol_name}` ${symbol.symbol_type}.",
+              "",
+              "## Signature",
+              "",
+              "```typescript",
+              "${symbol.signature}",
+              "```",
+              "",
+              "## Parameters",
+              "",
+              "| Name | Type | Description |",
+              "| --- | --- | --- |",
+              "| TBD | TBD | TBD |",
+              "",
+              "## Returns",
+              "",
+              "| Type | Description |",
+              "| --- | --- |",
+              "| TBD | TBD |",
+              "",
+              "## Usage",
+              "",
+              "```typescript",
+              "// Example usage of ${symbol.symbol_name}",
+              "// TODO: Add example",
+              "```",
+              "",
+              "## Notes",
+              "",
+              "- This is bootstrap documentation",
+              "- Complete this section with accurate information",
+              "- Add examples and edge cases",
+              ""
+            ]
+          }
+        ]
+      },
+      "tone": "technical",
+      "detailLevel": "High"
+    }
+  }
+}
